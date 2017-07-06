@@ -19,8 +19,14 @@ test('should return null if req is blank', () => {
   const req = {headers: {authorization: ''}}
   const result = getTokenFromHeader(req)
     expect(result).toBeNull()
-
 })
+
+test('getTokenFromHeader returns the token when provided', () => {
+  const req = {headers: {authorization: 'Token blablabla'}}
+  const result = getTokenFromHeader(req);
+  expect(result).toBe('blablabla')
+})
+
 test('I submitted my elaboration and feedback', () => {
   const submitted = true // change this when you've submitted!
   expect(true).toBe(submitted)
