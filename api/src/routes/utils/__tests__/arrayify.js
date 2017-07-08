@@ -19,7 +19,20 @@
 // it up if needed. Then continue the cycle until you cover all use cases.
 import arrayify from '../arrayify'
 
+test('return an array of the argument', () => {
+  const result = arrayify()
+  expect(result).toEqual([]);
+})
 
+test('return the array version of a single argument', () => {
+  const result = arrayify('one')
+    expect(result).toEqual(['one'])
+})
+
+test('returns same array, if given array', () => {
+  const result = arrayify([1,2,3]);
+  expect(result).toEqual([1,2,3]);
+})
 //////// Elaboration & Feedback /////////
 // When you've finished with the exercises:
 // 1. Copy the URL below into your browser and fill out the form
