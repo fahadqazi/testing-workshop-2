@@ -13,7 +13,7 @@ cypress/screenshots
 dist
 .opt-in
 .eslintcache
-
+.idea
 
 # Created by https://www.gitignore.io/api/test,node,emacs,webstorm
 
